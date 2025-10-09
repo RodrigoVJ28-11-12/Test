@@ -1,15 +1,13 @@
-meme_dict = {
-        "STALKEAR" : "investigar a vida de alguém online",
-        "CRINGE" : "algo vergonhoso ou constrangedor",
-        "VDD" : "abreviação da palavra verdade",
-        "BISCOITAR" : "postar algo apenas para chamar a atenção",
-        "HATER" : "pessoa que está constantemente criticando os outros",
-        "VLW" : "abreviação da palavra valeu"
-            }
+import random
 
-word = input("Digite uma palavra moderna que você não entende (escreva todo a palavra em letras maiúsculas): ")
+codes = "+-/*!&$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
 
-if word in meme_dict.keys():
-    print(meme_dict[word])
-else:
-    print("Pergunte outra palavra pois nem eu sei essa.")
+lengthinserting = int(input("insert length of the password"))
+
+password = ""
+
+for i in range(lengthinserting):
+
+    password += random.choice(codes)
+
+print(password)
